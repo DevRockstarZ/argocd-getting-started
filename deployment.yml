@@ -18,4 +18,4 @@ spec:
       - image: qkdlql/test-node-server:latest
         name: spring-petclinic
         ports:
-        - containerPort: 8080
+        - containerPort: 8090
