@@ -3,8 +3,10 @@ kind: Service
 metadata:
   name: test-node-server
 spec:
-  ports:
-  - port: 8090
-    targetPort: 8090
   selector:
     app: test-node-server
+  ports:
+    - port: 8090
+      protocol: TCP
+      targetPort: 8090
+  type: LoadBalancer
