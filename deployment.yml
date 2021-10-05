@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-petclinic
+  name: test-node-server
 spec:
   replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: spring-petclinic
+      app: test-node-server
   template:
     metadata:
       labels:
-        app: spring-petclinic
+        app: test-node-server
     spec:
       containers:
       # modify the following line with your Docker Hub account name
       - image: qkdlql/test-node-server:latest
-        name: spring-petclinic
+        name: test-node-server
         ports:
         - containerPort: 8090
